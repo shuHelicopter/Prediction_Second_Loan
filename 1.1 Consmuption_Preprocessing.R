@@ -115,7 +115,7 @@ new_consump_unique <- new_consump %>%
 write.csv(new_consump_unique, 'consump_clean0.csv')
 
 
-# PCA is useless, encoding is a better way
+# PCA is useless, encoding is a better way, and scaling is neccessay before PCA
 consump_recoding <- select(consump_reorder, c(user_id, prior_period_bill_amt, prior_period_repay_amt,
                                               card_type, avlb_bal, credit_lmt_amt, pre_borrow_cash_amt, 
                                               repay_stat, cost_cnt, is_cheat_bill, curr))
